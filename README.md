@@ -7,7 +7,7 @@ IF YOUR CASE INVOLVED A 4 DIGIT PIN, THE FOLLOWING SCRIPT WILL WORK. IF NOT, EDI
 MAKE SURE YOU ENTER THE SALT, SYMMETRIC KEY AND HASHED KEY IN THE "ENTER VALUE" FIELD BEFORE RUNNING.
 SOME DEPENDANCIES ARE REQUIRED FIRST.
 =============================================================================
-
+{{{
 import base64
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Cipher import AES
@@ -54,3 +54,4 @@ for pin_int in range(1000, 10000):
         print(f"Tried up to {pin}")
 
 print("❌ Failed to find PIN. Check keylen assumptions or iteration count.")
+}}}
